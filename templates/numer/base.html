@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap3 %}
+<html>
+<head>
+ 	{% block head %}
+	{% endblock head %}
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="120" >
+	<link rel="stylesheet" href="{% static 'odziez/bootstrap/css/bootstrap.min.css' %}">
+	<!--
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">-->
+    	<link rel="stylesheet" href="{% static 'odziez/css/styles.css' %}">
+    	<link rel="stylesheet" href="{% static 'odziez/css/Navigation-with-Button1.css' %}">
+
+        <title>SET NUMBER</title>
+
+</head>
+<body bgcolor="lightgrey">
+ {% block body %}
+{% endblock body %}
+</body>
+<script type="text/javascript">
+function myFilter(pos,inp) {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById(inp);
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myOil");
+        tr = table.getElementsByTagName("tr");
+        for (i = 1; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[pos];
+                if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                        } else {
+                             tr[i].style.display = "none";
+                         }
+                }
+        }
+}
+</script>
+</html>
+

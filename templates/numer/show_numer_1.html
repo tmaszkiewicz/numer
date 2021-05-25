@@ -1,0 +1,113 @@
+{% extends "numer/base.html" %}
+{% block head %}
+ <meta http-equiv="refresh" content="3">
+{% endblock %}
+{% block body %}
+<br>
+<div>
+<div class="container">
+<div class="row">
+<p>
+{% load static %}
+{% if wygas == 1 %}
+ <table id="screen" class="table">
+<tr>
+<td>
+{% if dziesiatki == '0' %}
+
+	<img src="{% static 'numer/0.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '1' %}
+
+	<img src="{% static 'numer/1.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '2' %}
+
+	<img src="{% static 'numer/2.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '3' %}
+
+	<img src="{% static 'numer/3.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '4' %}
+
+	<img src="{% static 'numer/4.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '5' %}
+
+	<img src="{% static 'numer/5.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '6' %}
+
+	<img src="{% static 'numer/6.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '7' %}
+
+	<img src="{% static 'numer/7.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '8' %}
+
+	<img src="{% static 'numer/8.jpg' %}" alt="s" align="right">
+{%elif  dziesiatki == '9' %}
+
+	<img src="{% static 'numer/9.jpg' %}" alt="s" align="right">
+{%endif%}
+</td>
+<td>
+{% if jednostki == '0' %}
+
+	<img src="{% static 'numer/0.jpg' %}" alt="s" align="lrft">
+{%elif  jednostki == '1' %}
+
+	<img src="{% static 'numer/1.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '2' %}
+
+	<img src="{% static 'numer/2.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '3' %}
+
+	<img src="{% static 'numer/3.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '4' %}
+
+	<img src="{% static 'numer/4.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '5' %}
+
+	<img src="{% static 'numer/5.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '6' %}
+
+	<img src="{% static 'numer/6.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '7' %}
+
+	<img src="{% static 'numer/7.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '8' %}
+
+	<img src="{% static 'numer/8.jpg' %}" alt="s" align="left">
+{%elif  jednostki == '9' %}
+
+	<img src="{% static 'numer/9.jpg' %}" alt="s" align="left">
+{%endif%}
+</td>
+</tr>
+</table>
+{%else%}
+<script>
+document.body.style.backgroundColor = "black";
+</script>
+{%endif%}
+</div>
+</div>
+</div>
+   <audio id="idAudio"> 
+	<source src=="{% static 'numer/service-bell_daniel_simion.wav' %}"  type="audio/wav">
+        <source src= "https://media.geeksforgeeks.org/wp-content/uploads/20190625153922/frog.mp3" type="audio/ogg"> 
+        <source src= "https://media.geeksforgeeks.org/wp-content/uploads/20190625153922/frog.ogg" type="audio/mpeg">  
+      Your browser does not support the audio element. 
+    </audio> 
+    <!--<button onclick="play_Audio()" type="button">Play Audio</button> 
+o    <button onclick="pause_Audio()" type="button">Pause Audio</button> -->
+
+
+{% if zmiana == 1 %}
+
+<script> 
+var GFG = document.getElementById("idAudio"); 
+
+    GFG.play(); 
+</script> 
+
+{% endif %}
+
+</p>
+{% endblock body %}
+
